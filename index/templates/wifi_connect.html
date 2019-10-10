@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wifi_connect</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block css %}
+    <link rel="stylesheet" href="{{ url_for('index.static',filename='css/wif_connect.css') }}" type="text/css">
+    {% endblock %}
+    {% block base_body %}
+    <div class="wifi_body">
+        <div class="wifi_password_box">
+            <form action="" method="post">
+                <div class="wifi_title">
+                    <span>Wifi_Name:</span>
+                    <span id="wifiname" style="color: brown">请选择网络</span>
+                    <input id="input_wifiname" name="wifi" style="display: none">
+                </div>
+                <span style="display: block;margin-left: 10%;margin-top: 5px;color: darkgray">PassWord:
+                    <input name="password" class="wifi_password_input" type="text"></span>
+                </span>
+                <input class="wifi_connect_button" type="submit" value="连接">
+            </form>
+        </div>
+
+        <div  class="wifi_lists_box">
+            <script>
+                function insert_wifi_name( name ) {
+                    var wifiname=document.getElementById('wifiname')
+                    var input_wifiname=document.getElementById('input_wifiname')
+                    input_wifiname.value=name
+                    wifiname.style.display='none'
+                    wifiname.innerText=name
+                    wifiname.style.display='inline-block'
+            }
+            </script>
+        {% for i in ssid %}
+                <div>
+                    <span class="wifi_ico"><b>W:</b></span>
+                    <span class="wifi_name">{{i}}</span>
+                    <span class="wifi_select" onclick="insert_wifi_name('{{i}}')"> 选择 </span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+</html>

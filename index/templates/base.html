@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>
+        {% block title %}
+        王钦丰温度采集
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{{ url_for('index.static',filename='css/base.css') }}" type="text/css">
+    {% block css %}
+    <link rel="stylesheet" href="{{ url_for('index.static',filename='css/wired_addr.css') }}" type="text/css">
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="nav_box">
+            <img src="{{ url_for('index.static',filename='image/logo.png') }}">
+            <span class="nav_title"> 网络温度多路采集器</span>
+            <span class="nav_version">vison 1.0.1 </span>
+            <span class="nav_Designer">设计者：王钦丰</span>
+            <span class="nav_warning">开源项目禁止商用</span>
+        </div>
+    </nav>
+    <div class="body_box">
+        <div class="lift_box">
+            <dl>
+                <dd>
+                    <span onclick="config_addrs()" class="one_menu">配置IP</span>
+                    <div id="two_box" class="two_box" style="display: none">
+                        <a class="a_not_wired" href="{{ url_for('.config_wired_addr') }}">
+                            <span class="two_menu">配置有线</span>
+                        </a>
+                        <a class="a_not_wired" href="{{ url_for('.config_wifi_addr') }}">
+                           <span class="two_menu">配置无线</span>
+                        </a >
+                        <a class="a_not_wired" href="{{ url_for('.default_getway') }}">
+                            <span class="two_menu">默认网关</span>
+                        </a>
+                        <a class="a_not_wired" href="{{ url_for('.wifi_connect') }}">
+                            <span class="two_menu">无线连接</span>
+                        </a>
+
+                    </div>
+                </dd>
+                <dd>
+                    <a class="a_not_wired" href="{{ url_for('.collector')}} ">
+                        <span class="one_menu">采集器配置</span>
+                    </a>
+                </dd>
+                <dd>
+                    <a class="a_not_wired" href="{{ url_for('.temperature') }}">
+                        <span class="one_menu">温度查看</span>
+                    </a>
+
+                </dd>
+                <dd>
+                    <a class="a_not_wired" href="{{ url_for('.reboot') }}">
+                        <span class="one_menu">修改IP重启设备</span>
+                    </a>
+                </dd>
+                <dd>
+                    <a class="a_not_wired" href="{{ url_for('.password') }}">
+                        <span class="one_menu">修改密码</span>
+                    </a>
+                </dd>
+            </dl>
+        </div>
+        <div class="main_body">
+            {% block base_body %}
+            {% endblock%}
+        </div>
+    </div>
+</body>
+<script>
+    function config_addrs() {
+        var look=document.getElementById('two_box')
+        if (look.style.display=='none'){
+            look.style.display='flex'
+        }else {
+            look.style.display='none'
+        }
+    }
+</script>
+</html>

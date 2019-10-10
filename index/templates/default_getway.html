@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wifi_connect</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block css %}
+    <link rel="stylesheet" href="{{ url_for('index.static',filename='css/wif_connect.css') }}" type="text/css">
+    {% endblock %}
+    {% block base_body %}
+    <div class="wifi_body">
+        <div class="wifi_password_box">
+            <form action="" method="post">
+                <div class="wifi_title">
+                    <span>Wifi_Name:</span>
+                    <span id="wifiname" style="color: brown">设置默认网关</span>
+                    <input id="input_wifiname" name="wifi" style="display: none">
+                </div>
+                <span style="display: block;margin-left: 10%;margin-top: 5px;color: darkgray">网关地址:
+                    <input name="default_getway" class="wifi_password_input" value={{ default_getway }} type="text"></span>
+                </span>
+                <input class="wifi_connect_button" type="submit" value="设置">
+            </form>
+        </div>
+
+    </div>
+    {% endblock %}
+
+</body>
+</html>

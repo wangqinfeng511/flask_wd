@@ -1,0 +1,37 @@
+.wired_addr_box{
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    width: 30%;
+    border: darkgrey 1px solid;
+    margin-top: 20%;
+    margin-left: 30%;
+}
+.wired_addr_box input[type=submit]{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10px;
+}
+.input_div{
+    width: 100%;
+    margin-top: 3px;
+}
+.input_div span{
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%;
+    text-align: center;
+}
+.input_div input{
+    margin-left: 5%;
+    border-radius: 2px;
+    border: darkgrey 1px solid;
+    color: darkgrey;
+}
+.input_div input:focus{
+    margin-left: 5%;
+    border-radius: 2px;
+    border: darkgrey 1px solid;
+    color: black;
+}
+

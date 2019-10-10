@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>当前温度</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block base_body %}
+<div id="main" style="width: 600px;height:400px;">
+    {% for i in wendu %}
+        <div>
+            <span>{{ i[0] }}当前温度:</span><span>{{ i[1] }}</span>
+        </div>
+    {% endfor%}
+</div>
+
+{% endblock %}
+
+</body>
+</html>

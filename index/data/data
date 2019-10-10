@@ -1,0 +1,1 @@
+{"wlan0": {"netmask": "255.255.255.0", "getway": null, "ip": "192.168.41.179"}, "devices": [["\u673a\u623f\u6e29\u5ea6", "28-0416a253caff", 1]], "wifi": {"ssid": "HOPE", "password": "hope123456"}, "eth0": {"netmask": "255.255.255.0", "getway": null, "ip": "192.168.1.11"}, "default_getway": "192.168.41.1"}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>采集器</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block css%}
+            <link rel="stylesheet" href="{{ url_for('index.static',filename='css/collector.css') }}" type="text/css">
+    {% endblock %}
+    {% block base_body %}
+        <div class="device_box">
+            <form action="" method="post">
+                {% for i in devices %}
+                    <div class="device_list_box">
+                        <input class="device_input" name={{i[0]}} value={{i[0]}}>
+                        <input class="device_input" disabled="true" value={{i[1]}}>
+                    </div>
+
+                {% endfor %}
+                <input class="device_input_button" type="submit" value="修改">
+            </form>
+        </div>
+    {% endblock %}
+
+</body>
+</html>

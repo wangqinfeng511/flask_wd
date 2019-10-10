@@ -1,0 +1,67 @@
+.wifi_body{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 968px;
+}
+.wifi_lists_box{
+    display: flex;
+    flex-direction: column;
+    border: darkgrey 1px solid;
+    width: 20%;
+    margin-left: 20%;
+    margin-top: 2%;
+    border-radius: 4px;
+}
+.wifi_ico{
+    color: crimson;
+    margin-left: 2px;
+}
+.wifi_select{
+    display: inline-block;
+    border: darkgrey 1px solid ;
+    border-radius: 2px;
+    width: 20%;
+    margin-top: 3px;
+}
+.wifi_select:hover{
+    display: inline-block;
+    border: darkgrey 1px solid ;
+    border-radius: 2px;
+    background-color: darkgrey;
+    margin-top: 3px;
+}
+.wifi_name{
+    color: aqua;
+    margin-left: 10px;
+    display: inline-block;
+    width: 30%;
+}
+.wifi_password_box{
+    border: darkgrey 1px solid;
+    margin-left: 25%;
+    margin-top: 20%;
+    border-radius: 5px;
+    height: 120px;
+}
+.wifi_password_box span{
+    font-size: 20px;
+}
+.wifi_title{
+    margin-left: 15%;
+    margin-top: 15px;
+    position: center;
+    color: darkgrey;
+}
+.wifi_password_input{
+    border-radius: 2px;
+    border: darkgrey 1px solid;
+    font-size: 20px;
+    height: 20px;
+    width: 50%;
+}
+.wifi_connect_button{
+    width: 20%;
+    height: 40px;
+    margin-left: 40%;
+}

@@ -1,0 +1,36 @@
+.login_box{
+    width: 24%;
+    border: darkgrey 2px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 36%;
+    margin-top: 20%;
+}
+.user_password_input{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: darkgrey 1px solid;
+    display: block;
+    text-align: center;
+    color: darkgrey;
+}
+.user_password_input:focus{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5px;
+    border-radius: 3px;
+    border: darkgrey 1px solid;
+    display: block;
+    text-align: center;
+    color: black;
+}
+
+.login_button{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 30%;
+    margin-left: 35%;
+}

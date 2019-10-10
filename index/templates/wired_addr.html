@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>有线地址配置</title>
+    <!--<link type="text/css" href="{{ url_for('index.static',filename='css/wired_addr.css') }}">-->
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block base_body %}
+        <form action="" method="post">
+            <div class="wired_addr_box">
+                <div class="input_div">
+                    <span>IP:</span>
+                    <input id="IP"   name="IP" type="text" value="{{ addr.ip}}">
+
+                </div>
+                <div class="input_div">
+                    <span>NETMASK:</span>
+                    <input name="NetMask" type="text" value="{{ addr.netmask }}">
+                </div>
+                <div class="input_div">
+                    <span>GetWay:</span>
+                    <input name="GetWay" type="text"  disabled value="{{ addr.getway }}">
+                </div>
+                <input type="submit" value="更改">
+            </div>
+        </form>
+    {% endblock%}
+</body>
+</html>
